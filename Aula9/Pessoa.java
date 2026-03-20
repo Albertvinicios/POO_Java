@@ -1,4 +1,4 @@
-public class Pessoa {
+public class Pessoa { //classe Pessoa, que representa o leitor do livro
     
     //atributos
     private String nome;
@@ -42,7 +42,7 @@ public class Pessoa {
         System.out.println("Parabéns Você fez aniversário");
         this.idade = getIdade()+1;
     }
-    @Override
+    @Override //override função de impressão do objeto, para imprimir as informações da pessoa
     public String toString() {
         return "Nome= " + nome + ", idade= " + idade 
         + ", sexo= " + sexo + " \n";

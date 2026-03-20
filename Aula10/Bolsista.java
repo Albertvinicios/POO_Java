@@ -1,4 +1,6 @@
-public class Bolsista extends Aluno {
+public class Bolsista extends Aluno { //objeto bolsista é um aluno
+//ou seja, herda os atributos e métodos da classe Aluno
+//e por consequência da classe Pessoa.
   
     //Atributo
     private int bolsa;

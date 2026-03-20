@@ -1,4 +1,4 @@
-public class Professor extends Pessoa {
+public class Professor extends Pessoa { //objeto professor é uma pessoa
     //Atributos
     private String especialidade;
     private Double salario;

@@ -1,8 +1,9 @@
 public class Aula9POO {
     public static void main(String[] args){
 
-        Pessoa[] p = new Pessoa[2];
-        Livro[] l = new Livro[3];
+        Pessoa[] p = new Pessoa[2]; //instanciando um vetor de objetos do tipo Pessoa
+        //para representar os leitores dos livros
+        Livro[] l = new Livro[3]; //instanciando um vetor de objetos do tipo Livro
 
         p[0] = new Pessoa("Pedro", 22, "M");
         p[1] = new Pessoa("Maria", 25,"F");

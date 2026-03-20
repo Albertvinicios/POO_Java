@@ -1,6 +1,7 @@
 package ProjetoFinal;
 
-public class Video implements AcoesVideo {
+public class Video implements AcoesVideo { //implementação da interface AcoesVideo
+//ou seja, a classe Video é obrigada a implementar os métodos da interface AcoesVideo.
   
     // Atributos
     private String titulo;

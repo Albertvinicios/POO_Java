@@ -1,6 +1,6 @@
 public class Aula7POO{
 	public static void main(String[] args){
-	Lutador[] vetL = new Lutador[6];
+	Lutador[] vetL = new Lutador[6]; // vetor de objetos do tipo Lutador
 	vetL[0] = new Lutador("Pretty Boy", "França", 31, 1.75f, 68.9f, 11, 3, 1);
 	vetL[1] = new Lutador("Putscript", "Brasil", 29, 1.68f, 57.8f, 14, 2, 3);
 	vetL[2] = new Lutador("Snapshadow", "EUA", 35, 1.65f, 80.9f, 12, 2, 1);
@@ -15,16 +15,16 @@ public class Aula7POO{
 	//vetL[5].apresentar();
 	//vetL[0].ganharLuta();
 	//vetL[0].perderLuta();
-	//vetL[0].empatarLuta();
-	vetL[3].status();
+	//vetL[0].empatarLuta(); //possibilidades
+	vetL[3].status(); ///status do lutador
 	vetL[2].status();
 	
-	System.out.println("Análise da luta");
+	System.out.println("Análise da luta"); //analise da luta
 
-	Luta uec01 = new Luta();
-	uec01.marcarLuta(vetL[3], vetL[2]);
-	uec01.lutar(vetL[3], vetL[2]);
-	vetL[3].status();
-	vetL[2].status();
+	Luta uec01 = new Luta(); //objeto do tipo luta
+	uec01.marcarLuta(vetL[3], vetL[2]); //marcar luta entre os lutadores
+	uec01.lutar(vetL[3], vetL[2]); //realizar a luta entre os lutadores
+	vetL[3].status(); //status do lutador após a luta
+	vetL[2].status(); //status do lutador após a luta
 	}
 }

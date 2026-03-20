@@ -1,4 +1,5 @@
-public class Funcionario extends Pessoa {
+public class Funcionario extends Pessoa { //objeto funcionario é uma pessoa
+//ou seja, herda os atributos e métodos da classe Pessoa.
     
     //Atributos
     private String setor;

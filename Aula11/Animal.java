@@ -1,4 +1,6 @@
-public abstract class Animal {
+public abstract class Animal { //classe abstrata é uma classe que não pode ser instanciada
+//ou seja, não pode criar objetos do tipo Animal
+//mas pode criar objetos de suas subclasses, como Mamifero, Reptil, Peixe e Ave.
 
     //Atributos
     protected float peso;

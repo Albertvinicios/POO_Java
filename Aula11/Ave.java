@@ -1,4 +1,5 @@
-public class Ave extends Animal {
+public class Ave extends Animal { //estende animal, ou seja, herda seus atributos e métodos
+//e por consequência, é uma subclasse de Animal
     //Atributos
     private String corPena;
 
@@ -18,6 +19,10 @@ public class Ave extends Animal {
     }
 
     //Métodos Funções Sobrepostas
+    //porém ao sobrescrever os métodos da classe Animal
+    //é necessário usar a anotação @Override, já que os métodos da classe Animal são abstratos
+    //ou seja, não possuem implementação, e cada animal se alimenta, locomove e etc..
+    //de formas diferentes.
     @Override
     public void alimentar() {
         System.out.println("Comendo Frutas");

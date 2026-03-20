@@ -1,8 +1,10 @@
 import java.util.Scanner;
-public class Livro implements Publicacao{
+public class Livro implements Publicacao{ //implementação da interface Publicacao
+    //constroi uma relação de associação entre as classes Livro e Pessoa
+    //ou seja, um livro tem um leitor do tipo Pessoa.
     Scanner input = new Scanner(System.in);
-    //atributos
 
+    //atributos
     private String titulo;
     private String autor;
     private int totPaginas;
@@ -11,8 +13,7 @@ public class Livro implements Publicacao{
     private Pessoa leitor;
     
     //Métodos Construtores
-
-    public Livro(){
+    public Livro(){ //construtor vazio
         this.titulo = " ";
         this.autor = " ";
         this.totPaginas = 0;
@@ -20,7 +21,7 @@ public class Livro implements Publicacao{
         this.aberto = false;
     }
 
-    public Livro(String t, String a, int tot, Pessoa pes) {
+    public Livro(String t, String a, int tot, Pessoa pes) { //construtor com parametros
         this.titulo = t;
         this.autor = a;
         this.totPaginas = tot;
@@ -48,11 +49,12 @@ public class Livro implements Publicacao{
     public int getPagAtual() {
         return pagAtual;
     }
-    public void setPagAtual(int paga) {
-        if(paga <= getTotPaginas() && paga >= 0){
+    public void setPagAtual(int paga) { //possibilidade de folhear o livro para uma página específica
+        if(paga <= getTotPaginas() && paga >= 0){ 
             this.pagAtual = paga;
-            setAberto(true);
-        }else{
+            setAberto(true); //abrir o livro para folhear
+        }else{ //verificar se a página existe
+            System.out.println("Página não existe");
         }
     }
     public boolean getAberto() {
@@ -68,7 +70,7 @@ public class Livro implements Publicacao{
         this.leitor = leitor;
     }
     // Métodos Funções
-
+    //override função de impressão do objeto, para imprimir as informações do livro e do leitor
     @Override
     public void abrir() {
         if(getAberto()){
@@ -79,7 +81,9 @@ public class Livro implements Publicacao{
             this.pagAtual = 0;
         }             
     }
-
+    //possibilidade de avançar página por página
+    //override representa sobrecarga de método
+    //ou seja, a implementação do método da interface Publicacao
     @Override
     public void avancarPag() {
         if(getAberto() && getPagAtual() < getTotPaginas()){
@@ -89,7 +93,8 @@ public class Livro implements Publicacao{
         }
     }
 
-    @Override
+    //porem o override é desnecessário para o método fechar, pois ele não tem sobrecarga
+    //ou seja, não tem outra versão do método fechar
     public void fechar() {
         if(getAberto()){
             System.out.println("Fechando Livro");
@@ -99,7 +104,7 @@ public class Livro implements Publicacao{
             System.out.println("O livro já está fechado");
         }
     }
-
+    //isso se aplica a todos os overrides nesse casoo
     @Override
     public void folhear() {
         if(getAberto()){

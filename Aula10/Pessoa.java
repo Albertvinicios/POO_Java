@@ -1,4 +1,9 @@
-public abstract class Pessoa{
+public abstract class Pessoa{ //clase abstrata é uma classe que não pode ser instanciada
+//ou seja, não pode criar objetos do tipo Pessoa, mas pode criar objetos de suas subclasses
+//como Aluno, Professor e Funcionario.
+//porém nesse caso, como a classe Pessoa é a superclasse de Aluno
+//Professor e Funcionario, ela pode ser instanciada, ou seja, pode criar objetos do tipo Pessoa.
+//e essas pessoas, podem ser alunos, funcionários e etc...
     
     //atributos
     private String nome;

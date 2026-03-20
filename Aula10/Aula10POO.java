@@ -1,8 +1,9 @@
 public class Aula10POO {
     public static void main(String[] args){
 
-        Pessoa p1 = new Pessoa();
-        Aluno p2 = new Aluno();
+        Pessoa p1 = new Pessoa(); //instanciando um objeto do tipo Pessoa
+        //que é a superclasse de Aluno, Professor e Funcionario
+        Aluno p2 = new Aluno(); 
         Professor p3 = new Professor();
         Funcionario p4 = new Funcionario();
 
